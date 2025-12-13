@@ -43,6 +43,7 @@ export function CarouselPlugin() {
                 alt={image.alt}
                 fill
                 className="object-cover"
+                priority={index === 0}
               />
               {/* Dark overlay */}
               <div className="absolute inset-0 bg-black/40"></div>
@@ -50,7 +51,7 @@ export function CarouselPlugin() {
 
             {/* Text overlay */}
             {image.text && (
-              <div className="absolute inset-0 flex items-center justify-center z-10 px-8">
+              <div className="absolute inset-0 flex items-center justify-center z-0 px-8 pt-20">
                 <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center">
                   {image.text}
                 </h2>
@@ -61,71 +62,19 @@ export function CarouselPlugin() {
       </div>
 
       {/* Slider indicators */}
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
+      <div className="absolute z-0 flex -translate-x-1/2 bottom-8 left-1/2 space-x-3">
         {images.map((_, index) => (
           <button
             key={index}
             type="button"
-            className={`w-3 h-3 rounded-full ${
-              index === currentSlide ? "bg-white" : "bg-gray-400"
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === currentSlide ? "bg-white w-8" : "bg-gray-400 hover:bg-gray-300"
             }`}
             aria-label={`Slide ${index + 1}`}
             onClick={() => goToSlide(index)}
           />
         ))}
       </div>
-
-      {/* Slider controls - Previous */}
-      {/* <button
-        type="button"
-        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        onClick={prevSlide}
-      >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
-          <svg
-            className="w-5 h-5 text-white rtl:rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="m15 19-7-7 7-7"
-            />
-          </svg>
-          <span className="sr-only">Previous</span>
-        </span>
-      </button> */}
-
-      {/* Slider controls - Next */}
-      {/* <button
-        type="button"
-        className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        onClick={nextSlide}
-      >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
-          <svg
-            className="w-5 h-5 text-white rtl:rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="m9 5 7 7-7 7"
-            />
-          </svg>
-          <span className="sr-only">Next</span>
-        </span>
-      </button> */}
     </div>
   )
 }
