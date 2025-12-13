@@ -366,7 +366,7 @@ function page() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-[#016630] font-bold mr-3">✓</span>
-                    Intégrations personnalisées
+                    Intégrations personnalisées d'agent IA 
                   </li>
                   <li className="flex items-center">
                     <span className="text-[#016630] font-bold mr-3">✓</span>
@@ -374,11 +374,11 @@ function page() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-[#016630] font-bold mr-3">✓</span>
-                    Formation approfondie
+                    Accès premium à l'application OYABUNG 
                   </li>
                   <li className="flex items-center">
                     <span className="text-[#016630] font-bold mr-3">✓</span>
-                    Consultation stratégique
+                     stratégique publicitaire
                   </li>
                 </ul>
               </CardContent>
