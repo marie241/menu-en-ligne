@@ -77,6 +77,18 @@ function page() {
   return (
     <>
       <Nav />
+      <div>
+        <title>Menu en ligne - Digitalisez votre restaurant avec des menus QR code</title>
+        <meta
+          name="description"
+          content="Créez un menu digital moderne et simple pour votre restaurant avec Menu en ligne. Offrez à vos clients une expérience 100% digitale grâce aux QR codes."
+        />
+        <div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-[#016630] mt-32 px-4 md:px-10 lg:px-20">
+            Menu en ligne - Digitalisez votre restaurant avec des menus QR code
+          </h1>
+        </div>
+      </div>
       <div className="pt-24 flex justify-center">
         <CarouselPlugin />
       </div>

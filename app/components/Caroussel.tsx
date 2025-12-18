@@ -7,8 +7,8 @@ export function CarouselPlugin() {
   const [currentSlide, setCurrentSlide] = React.useState(0)
 
   const images = [
-    { src: "/menu2.png", alt: "Menu 2", text: "Créez un menu digital moderne, simple et prêt en quelques minutes." },
-    { src: "/menu.jpg", alt: "Menu", text: "Réinventez votre restaurant en le digitalisant" },
+    { src: "/Group21.png", alt: "Menu 2", text: "Créez un menu digital moderne, simple et prêt en quelques minutes." },
+    { src: "/Group22.png", alt: "Menu", text: "Réinventez votre restaurant en le digitalisant" },
     { src: "/Qr.png", alt: "QR Code", text: "Offrez à vos clients une expérience de menu 100 % digitale" },
     { src: "/Qrcode.jpeg", alt: "QR Code 2", text: "Toutes vos statistiques claire et centralisées" },
   ]
