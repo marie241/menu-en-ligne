@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -32,8 +33,14 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <Link href="#" className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-lg bg-green-deep flex items-center justify-center">
-            <span className="text-sm font-bold text-primary-foreground">M</span>
+          <div className="h-9 w-9 rounded-lg flex items-center justify-center">
+            <Image
+              src="/menu2.png"
+              alt="Logo - Menu en ligne"
+              width={36}
+              height={36}
+              className="object-cover rounded-md"
+            />
           </div>
           <span className={`text-lg font-bold tracking-tight ${scrolled ? "text-foreground" : "text-foreground"}`}>
             MENU EN LIGNE
