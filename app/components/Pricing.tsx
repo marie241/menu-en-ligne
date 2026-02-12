@@ -67,11 +67,10 @@ export default function Pricing() {
                 key={plan.id}
                 onMouseEnter={() => setHoveredPlan(plan.id)}
                 onMouseLeave={() => setHoveredPlan(null)}
-                className={`relative flex flex-col rounded-2xl border-2 p-8 md:p-10 transition-all duration-300 ${
-                  isPopular
+                className={`relative flex flex-col rounded-2xl border-2 p-8 md:p-10 transition-all duration-300 ${isPopular
                     ? "border-gold bg-card shadow-xl scale-[1.02]"
                     : "border-border bg-card hover:border-gold/40 hover:shadow-lg"
-                }`}
+                  }`}
               >
                 {plan.badge && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -104,11 +103,10 @@ export default function Pricing() {
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <span
-                        className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
-                          isPopular
+                        className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${isPopular
                             ? "bg-gold/15 text-gold"
                             : "bg-green-deep/10 text-green-deep"
-                        }`}
+                          }`}
                       >
                         <Check size={13} strokeWidth={3} />
                       </span>
@@ -123,11 +121,10 @@ export default function Pricing() {
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-sm font-semibold transition-all duration-300 ${
-                    isPopular
+                  className={`inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-sm font-semibold transition-all duration-300 ${isPopular
                       ? "bg-gold text-accent-foreground hover:bg-gold-light shadow-md hover:shadow-lg"
                       : "bg-green-deep text-primary-foreground hover:bg-green-deep/90"
-                  } ${isHovered ? "translate-y-[-1px]" : ""}`}
+                    } ${isHovered ? "translate-y-[-1px]" : ""}`}
                 >
                   Demandez une demo
                 </a>
@@ -137,8 +134,7 @@ export default function Pricing() {
         </div>
 
         <p className="mt-10 text-center text-sm text-muted-foreground">
-          Tous les tarifs sont en Francs CFA (XAF). Paiement par Mobile Money ou
-          virement bancaire.
+          Tous les tarifs sont en Francs CFA (XAF). Paiement par Mobile Money.
         </p>
       </div>
     </section>
